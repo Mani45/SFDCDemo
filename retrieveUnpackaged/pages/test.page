@@ -1,0 +1,14 @@
+<apex:page controller="Sample"> 
+<apex:form >
+<apex:pageblock >
+<apex:inputtext html-placeholder="Type Something"/>
+<apex:commandlink action="{!Google}" target="_blank">
+<apex:commandButton value="Google"/>
+</apex:commandlink>
+<apex:commandlink action="{!switch}" target="_blank"> 
+<apex:commandButton value="Switch"/>
+</apex:commandLink>
+
+</apex:pageblock>
+</apex:form>
+</apex:page>

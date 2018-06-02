@@ -1,0 +1,7 @@
+<apex:page standardController="tesy__c" >
+  <apex:form >
+    <apex:pageblock >
+      <c:visualforcecomponent InputField="Test" />
+    </apex:pageblock>
+    </apex:form>
+</apex:page>

@@ -1,0 +1,15 @@
+<apex:page Controller="vftoexcel" >
+ <apex:pageBlock title="Hello Mr.{!$User.FirstName}">
+     
+ </apex:pageBlock>
+ 
+ <apex:pageblock title="Accounts">
+    <apex:pageblocktable value="{!taccount}" var="item">
+       <apex:column value="{!item.name}"/>
+       <apex:column value="{!item.phone}"/>
+     
+    
+    </apex:pageblocktable>
+ 
+ </apex:pageblock>
+</apex:page>

@@ -1,0 +1,10 @@
+<apex:page controller="taprog1" >
+ <apex:form >
+ 
+          UserName  <apex:Inputtext value="{!tuser}" />  <br/>
+                 
+           {!tuser}
+   
+ </apex:form>
+ 
+</apex:page>

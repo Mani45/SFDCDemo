@@ -1,0 +1,26 @@
+<apex:page Controller="SerialPopup" wizard="true">
+    <script>
+      function Close()
+        {          
+          window.close();
+        }
+    </script>
+    <apex:form >
+        <apex:pageBlock >
+            <apex:pageBlockTable value="{!Items}" var="d">
+                <apex:column headerValue="Serial Numbers">
+                     <a value="{!d.Name}" style="cursor: pointer; cursor: hand;" onclick="javascript.window.close()">{!d.Name} </a>                        
+                </apex:column>
+            </apex:pageBlockTable>
+        </apex:pageBlock>
+        
+        <apex:pageBlock >
+            <apex:commandButton value="Click" onclick="pop()"/>
+        </apex:pageBlock>
+    </apex:form>
+    <script>
+    function pop() {
+    prompt("Enter something!", "Text");
+}
+</script>
+</apex:page>

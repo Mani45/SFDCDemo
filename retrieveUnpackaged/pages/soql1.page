@@ -1,0 +1,12 @@
+<apex:page showheader="false" controller="apsoql">
+ <apex:form >
+   
+     <apex:commandButton value="Insert" action="{!m1}"/><br/>
+     <apex:commandButton value="Update" action="{!m2}"/><br/>
+     <apex:commandButton value="Delete" action="{!m3}"/><br/>
+   <apex:outputtext value="{!stat}"></apex:outputtext>
+ 
+ </apex:form>
+  
+  
+  </apex:page>

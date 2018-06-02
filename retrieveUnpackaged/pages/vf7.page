@@ -1,0 +1,6 @@
+<apex:page showHeader="false" > 
+ <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><h1> &nbsp;     &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
+        Congratulations</h1>
+                This is your new Page: vf7
+                
+</apex:page>

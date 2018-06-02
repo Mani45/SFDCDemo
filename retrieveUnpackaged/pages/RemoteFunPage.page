@@ -1,0 +1,14 @@
+<apex:page controller="MYRemoteClass">
+<script>
+function MyRemoteFun(){
+    Visualforce.remoting.Manager.invokeAction('{!$RemoteAction.MYRemoteClass.sampleOne}',
+    function(result, event){
+    console.log('--result-->'+result);
+    alert('--Resulet here-->'+result);
+    },{escape: true});
+}
+</script>
+<apex:form id="frm">
+<apex:commandButton value="MyRemoteCall" onclick="MyRemoteFun()"  />
+</apex:form>
+</apex:page>

@@ -1,0 +1,60 @@
+<apex:page controller="SendSmsEmail" tabStyle="Lineitems__c">
+  <apex:form id="mBlock">
+  <apex:pageBlock >
+   <apex:pageMessages />
+   <apex:actionStatus id="actStatusId" >
+                <apex:facet name="start" >
+                <apex:image value="/img/loading.gif" title="Processing..."/>                                    
+                </apex:facet>
+            </apex:actionStatus>
+  <apex:pageblocksection title=" M Ticket" collapsible="false">
+  <apex:pageBlockSectionItem >
+  
+      <apex:commandButton value="Send mTicket" style="width:100px" reRender="mBlock"/>
+      </apex:pageBlockSectionItem>
+       <apex:pageBlockSectionItem >
+    
+   Send to Other Phone No <apex:inputCheckbox value="{!checkMobile}" >
+    
+    <apex:actionsupport event="onchange" rerender="p"/> </apex:inputCheckbox>
+     </apex:pageBlockSectionItem>
+      <apex:pageBlockSectionItem >
+    <apex:outputpanel id="p">
+    
+    <apex:inputtext value="{!phone}" html-placeholder="Mobile Number" rendered="{!if(checkMobile==true,true,false)}"/>
+    
+    </apex:outputpanel> </apex:pageBlockSectionItem>
+    </apex:pageblocksection>
+    
+    <apex:pageblocksection >
+    </apex:pageblocksection>
+    
+    
+    <apex:pageblocksection title=" E Ticket" collapsible="false">
+     <apex:pageBlockSectionItem >
+    
+    <apex:commandButton value="Send eTicket" style="width:100px" action="{!send}" reRender="mBlock" status="actStatusId"/>
+       
+     </apex:pageBlockSectionItem>
+      <apex:pageBlockSectionItem >
+   Send to Other email Id <apex:inputCheckbox value="{!checkEmail}" >
+    <apex:actionsupport event="onchange" rerender="p2"/> </apex:inputCheckbox>
+     </apex:pageBlockSectionItem>
+     
+      <apex:pageBlockSectionItem >
+    <apex:outputpanel id="p2">
+    
+    <apex:inputtext value="{!email}" html-placeholder="Email Id" rendered="{!if(checkEmail==true,true,false)}"/>
+    
+    
+    </apex:outputpanel> </apex:pageBlockSectionItem>
+    </apex:pageblocksection>
+    
+
+    </apex:pageBlock>
+    
+   
+
+  
+  </apex:form>
+</apex:page>

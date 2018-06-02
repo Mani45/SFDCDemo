@@ -1,0 +1,32 @@
+<apex:page controller="searchResults">
+<apex:form >
+
+<script>
+function search(){
+   var selValues='{!options}'; 
+    alert(selValues);
+       
+        var myPicklistElement = document.getElementById('{!$Component.ref.op}');     
+        var myPicklistValue = myPicklistElement.options[myPicklistElement.selectedIndex].value;
+
+    var inputCheckBox = document.getElementsByTagName("op");   
+  //  alert(inputCheckBox.label);
+  
+   for(option in selValues){
+   // alert(selValues[option].value);
+   }
+ 
+   }
+</script>
+
+  <apex:pageBlock id="pb">
+ Enter Value <apex:inputtext value="{!inputVlaue}">
+ <apex:actionsupport event="onkeydown" action="{!search}" rerender="ref"/></apex:inputtext>
+      
+      <apex:selectcheckBoxes value="{!selectdValues}" layout="pageDirection" id="ref">
+    <apex:selectOptions value="{!options}" id="op" />
+   </apex:selectcheckBoxes>
+   <apex:commandButton onclick="search()"/>
+  </apex:pageBlock>
+</apex:form>
+</apex:page>

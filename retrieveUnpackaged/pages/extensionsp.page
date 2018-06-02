@@ -1,0 +1,15 @@
+<apex:page showheader="f" standardController="lead" extensions="e1,e2">
+
+<apex:form >
+  <apex:pageblock >
+    <apex:pageblocksection title="Lead">
+       <apex:inputfield value="{!lead.name}"/>
+       <apex:inputfield value="{!lead.Course__c}"/>
+       <apex:commandButton action="{!save}" value="save"/>
+    
+    </apex:pageblocksection>
+  
+  </apex:pageblock>
+</apex:form>
+
+</apex:page>

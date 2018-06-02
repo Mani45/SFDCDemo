@@ -1,0 +1,12 @@
+<apex:page controller="acsup">
+ <apex:form > 
+  Click on Inputtext box<apex:inputtext >
+      <apex:actionsupport action="{!actionsup}" event="onclick"/>
+  </apex:inputtext>
+  
+  <apex:pageblock >
+  <apex:outputtext value="{!displaystatus}"/>
+  </apex:pageblock> 
+ 
+ </apex:form> 
+</apex:page>

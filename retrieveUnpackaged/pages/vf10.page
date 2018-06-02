@@ -1,0 +1,22 @@
+<apex:page standardController="TStudent__c" recordSetVar="recs" >
+
+<apex:outputtext value="Salesforce" style="color:red"/>
+
+
+<apex:form >
+    <apex:pageblock title=" Kryption Pageblock " >
+     
+        <apex:pageblockSection title="All Merchandize Records">
+            <apex:pageBlockTable value="{!recs}" var="item">
+                 <apex:column >
+                 <apex:inputfield value="{!item.name}"/> </apex:column>
+                 <apex:column value="{!item.name}"/>
+                
+            </apex:pageBlockTable>
+        
+        </apex:pageblockSection>
+        
+    </apex:pageblock>
+</apex:form>
+  
+</apex:page>

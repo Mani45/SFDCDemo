@@ -1,0 +1,10 @@
+<apex:page standardController="Account">
+  <apex:form >
+      <apex:pageblock >
+             <apex:repeat value="{!$ObjectType.tesy__c.fieldsets.Test}" var="fieldVal">
+                    <apex:Inputfield value="{!Account[fieldVal]}" />
+                    <apex:commandButton action="{!save}"/>
+             </apex:repeat>
+        </apex:pageblock>
+    </apex:form>
+</apex:page>

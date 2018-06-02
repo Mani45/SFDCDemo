@@ -1,0 +1,18 @@
+<!-- Displaying Object records through vf-->
+
+<apex:page standardcontroller="lead" recordsetvar="recs" showheader="false" >
+    <apex:form >
+        <apex:pageBlock >
+            <apex:pageBlockSection title=" Lead records">
+
+                <apex:pageBlockTable value="{!recs}" var="it1" >
+                    <apex:column value="{!it1.name}"/>
+                    <apex:column value="{!it1.company}"/>
+                    <apex:column value="{!it1.email}"/>
+                    <apex:column value="{!it1.Course__c}"/>
+                </apex:pageBlockTable> 
+                
+            </apex:pageBlockSection>
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

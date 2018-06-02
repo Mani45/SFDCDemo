@@ -1,0 +1,21 @@
+<apex:page controller="testWrapperJson">
+
+<apex:form >
+<apex:pageBlock >
+<apex:pageblocktable value="{!wAle}" var="s">
+
+<apex:column value="{!s.statusCode}"/>
+<apex:column value="{!s.statusMessage}"/>
+<apex:column value="{!s.alert[0].alertId}"/>
+<apex:column value="{!s.alert[0].alertStatType.alertStatCde}"/>
+<apex:column value="{!s.alert[0].alertStatType.alertStatDesc}"/>
+<apex:column value="{!s.alert[0].alertStatType.createByNam}"/>
+
+
+</apex:pageblocktable>
+
+</apex:pageBlock>
+
+</apex:form>
+  
+</apex:page>

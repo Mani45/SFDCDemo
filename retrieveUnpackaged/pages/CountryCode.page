@@ -1,0 +1,9 @@
+<apex:page Controller="testing_custom">
+       <apex:form >
+       
+         <apex:selectList label="Region" value="{!selVlaue}" size="1" multiselect="false">
+          <apex:selectOptions value="{!MyOptions}"/>
+         </apex:selectList>
+              
+       </apex:form>
+      </apex:page>

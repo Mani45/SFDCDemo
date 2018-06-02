@@ -1,0 +1,19 @@
+<apex:page standardController="tesy__c" recordSetVar="recs">
+ <apex:pageblock >
+   <apex:pageblocksection >
+      <apex:pageblocktable value="{!recs}" var="item">
+          <apex:column value="{!item.name}"/> 
+      
+      
+      </apex:pageblocktable>
+   
+   </apex:pageblocksection>
+ </apex:pageblock>   
+ <apex:dataTable value="{!recs}" var="item">
+   <apex:column value="{!item.name}"/> 
+ </apex:dataTable>
+ <apex:dataList value="{!recs}" var="item">
+   "{!item.name}"
+ </apex:dataList>
+ 
+</apex:page>

@@ -1,0 +1,13 @@
+<!--CSS with Inline-->
+
+<apex:page showHeader="false">
+
+<font size="20px" color="red">  Good Morning    </font> <br/>
+
+<apex:outputtext value=" Good Morning"  style="font-size:20px; color:red" /> <br/>
+
+<font size="30px" color="blue">  Salesforce Training </font> <br/>
+
+<apex:outputtext value=" Visual force training" style="font-size:30px; color:violet" />
+
+</apex:page>

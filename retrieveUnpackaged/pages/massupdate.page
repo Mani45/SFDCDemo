@@ -1,0 +1,38 @@
+<apex:page tabStyle="Account" controller="massupdatec" showHeader="false">
+<apex:sectionHeader title="Accounts Mass Update"></apex:sectionHeader>
+
+<apex:form >
+<apex:pageBlock id="pageBlock">
+    <!-- This block will show the search textbox and the Search button -->
+    <apex:pageBlockButtons location="top">
+        Account Name :
+            <apex:inputText value="{!SearchText}" style="height:15px;"></apex:inputText>
+        <apex:commandButton value="Search" action="{!ShowData}" id="theButton" rerender="pageBlock" status="status12"></apex:commandButton>
+    </apex:pageBlockButtons>
+     
+     
+
+    <apex:actionFunction action="{!UpdateRecords}" name="updateRecords1" rerender="pageBlock" status="status12"></apex:actionFunction>
+     
+<!-- The action status to show when the AJAX postback is wroking. -->
+    <apex:actionStatus id="status12" startText="Requesting..."/>
+    
+    
+    
+  <!-- This table contains columns which have inputfield components -->
+  <apex:pageBlockTable value="{!accounts}" var="a" rendered="{!NOT(ISNULL(accounts))}">
+  
+  <apex:column value="{!a.Name}"  >   </apex:column>
+    <apex:column value="{!a.Phone}"  >  </apex:column>
+    
+    <apex:column headerValue="Name"  >
+    <apex:inputField value="{!a.Name}" onchange="updateRecords1();"></apex:inputField>
+    </apex:column>
+     
+    <apex:column headerValue="Phone" >
+    <apex:inputField value="{!a.Phone}" onchange="updateRecords1();"></apex:inputField>
+    </apex:column>
+  </apex:pageBlockTable>
+</apex:pageBlock>
+</apex:form>
+</apex:page>

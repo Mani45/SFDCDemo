@@ -1,0 +1,48 @@
+<apex:page showheader="f" controller="apractice">
+<apex:form >
+<script>
+   function isEmpty(username,pwd){
+    var id=document.getElementByid(username).value;
+    var password=document.getElementByid(pwd).value;
+     if(id==''){
+     alert('Please Enter UserName')
+     document.getElementByid(username).focus();
+     else
+     if(password=='')
+     alert('Please Enter Password');
+     document.getElementByid(pwd).focus();
+     }
+   return true;
+   
+   }
+   
+  function clearAll(usernaem,pwd){
+    document.getElementByid(username).value='';
+    document.getElementByid(pwd).value='';
+    document.getElementByid(username).focus();
+  return false;
+  }
+  
+</script>
+
+
+    <apex:pageblock title="Login Block">
+     <apex:pageblocksection title="Login Section">
+       <apex:outputlabel value="User Name"></apex:outputlabel>
+       <apex:inputtext id="UserName" value="{!uname}" />
+       <apex:outputlabel value="Password"></apex:outputlabel>
+       <apex:inputtext id="password" value="{!pwd}"/>
+       <apex:commandButton value="Login" onclick="isEmpty('{!$Component.username}','{!$Component.password}')" onfocus="{!$Component.username}" action="{!dologin}"/>
+       <apex:commandButton value="Clear" onclick="ClearAll('{!$Component.username}','{!$Component.password}')"/>
+      <apex:actionStatus id="status1" startText="requesting for UserName password validation..."/>
+
+       
+     </apex:pageblocksection>
+  <apex:message > </apex:message>
+  <apex:actionStatus id="status1" startText="requesting for UserName password validation..."/>
+
+  
+  </apex:pageblock>
+</apex:form>
+    
+</apex:page>

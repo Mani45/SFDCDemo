@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <allowInChatterGroups>false</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <enableActivities>true</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableChangeDataCapture>false</enableChangeDataCapture>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>true</enableHistory>
+    <enableReports>true</enableReports>
+    <enableSearch>true</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <fields>
+        <fullName>Date__c</fullName>
+        <externalId>false</externalId>
+        <label>Date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>First_Half__c</fullName>
+        <externalId>false</externalId>
+        <label>First Half</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Public Holiday</fullName>
+                    <default>false</default>
+                    <label>Public Holiday</label>
+                </value>
+                <value>
+                    <fullName>Weekend</fullName>
+                    <default>false</default>
+                    <label>Weekend</label>
+                </value>
+                <value>
+                    <fullName>Field Day</fullName>
+                    <default>false</default>
+                    <label>Field Day</label>
+                </value>
+                <value>
+                    <fullName>State sales Meeting</fullName>
+                    <default>false</default>
+                    <label>State sales Meeting</label>
+                </value>
+                <value>
+                    <fullName>Client Training/Conference</fullName>
+                    <default>false</default>
+                    <label>Client Training/Conference</label>
+                </value>
+                <value>
+                    <fullName>Ascott Meeting</fullName>
+                    <default>false</default>
+                    <label>Ascott Meeting</label>
+                </value>
+                <value>
+                    <fullName>Annual Leave</fullName>
+                    <default>false</default>
+                    <label>Annual Leave</label>
+                </value>
+                <value>
+                    <fullName>Sick Leave</fullName>
+                    <default>false</default>
+                    <label>Sick Leave</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Second_Half__c</fullName>
+        <externalId>false</externalId>
+        <label>Second Half</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Public Holiday</fullName>
+                    <default>false</default>
+                    <label>Public Holiday</label>
+                </value>
+                <value>
+                    <fullName>Weekend</fullName>
+                    <default>false</default>
+                    <label>Weekend</label>
+                </value>
+                <value>
+                    <fullName>Field Day</fullName>
+                    <default>false</default>
+                    <label>Field Day</label>
+                </value>
+                <value>
+                    <fullName>State sales Meeting</fullName>
+                    <default>false</default>
+                    <label>State sales Meeting</label>
+                </value>
+                <value>
+                    <fullName>Client Training/Conference</fullName>
+                    <default>false</default>
+                    <label>Client Training/Conference</label>
+                </value>
+                <value>
+                    <fullName>Ascott Meeting</fullName>
+                    <default>false</default>
+                    <label>Ascott Meeting</label>
+                </value>
+                <value>
+                    <fullName>Annual Leave</fullName>
+                    <default>false</default>
+                    <label>Annual Leave</label>
+                </value>
+                <value>
+                    <fullName>Sick Leave</fullName>
+                    <default>false</default>
+                    <label>Sick Leave</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Statuscheck__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Statuscheck</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>User__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>User</label>
+        <referenceTo>User</referenceTo>
+        <relationshipName>timesheets</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>dayname__c</fullName>
+        <externalId>false</externalId>
+        <formula>CASE( MOD( Date__c - DATE(1900, 1, 7), 7), 0, &quot;Sunday&quot;, 1, &quot;Monday&quot;, 2, &quot;Tuesday&quot;, 3, &quot;Wednesday&quot;, 4, &quot;Thursday&quot;, 5, &quot;Friday&quot;, 6, &quot;Saturday&quot;,&quot;Error&quot;)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>dayname</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <label>timesheet</label>
+    <nameField>
+        <displayFormat>T-{0000}</displayFormat>
+        <label>timesheet Name</label>
+        <trackHistory>false</trackHistory>
+        <type>AutoNumber</type>
+    </nameField>
+    <pluralLabel>timesheets</pluralLabel>
+    <searchLayouts/>
+    <sharingModel>ReadWrite</sharingModel>
+    <visibility>Public</visibility>
+</CustomObject>

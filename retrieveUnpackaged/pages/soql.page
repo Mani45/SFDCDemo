@@ -1,0 +1,14 @@
+<apex:page showHeader="false" standardController="account" >
+  <apex:form >
+  <apex:pageBlock >
+  <apex:pageblocksection >
+    <apex:inputfield value="{!account.name}"/><br/>
+    <apex:inputfield value="{!account.phone}"/><br/>
+    <apex:commandButton value="Submit" action="{!save}"/>
+  
+  </apex:pageblocksection>
+
+  </apex:pageBlock>    
+ </apex:form>
+  
+ </apex:page>
