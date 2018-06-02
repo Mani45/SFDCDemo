@@ -150,4 +150,30 @@
     <target name="describeMetadata">
       <sf:describeMetadata username="${sf.username}" password="${sf.password}" sessionId="${sf.sessionId}" serverurl="${sf.serverurl}" resultFilePath="describeMetadata/describe.log"/>
     </target>
+	
+	<target name="deployCodeRunLocalTests">
+    <!--
+	  <sf:deploy username="${sf.username}" password="${sf.password}" maxPoll="${sf.maxPoll}" deployRoot="src" serverurl="${sf.serverurl}" rollbackOnError="true"  runAllTests="false"/>
+    -->
+    <echo>${env.CIRCLE_BRANCH}</echo>
+    <property file="build.properties" prefix="credentialMetadata"/>
+    <propertyselector property="credential" delimiter="," match="sf\.username\.([^\.]*)" select="\1" casesensitive="false" distinct="true"/>
+    <for list="${credential}" param="sequence">
+      <sequential>
+        <if>
+          <equals arg1="@{sequence}" arg2="${env.CIRCLE_BRANCH}" />
+          <then>
+            <echo>${credentialMetadata.sf.username.@{sequence}}</echo>
+            <echo>@{sequence}</echo>
+            <echo>${credentialMetadata.sf.password.@{sequence}}</echo>
+            
+            <sf:deploy username="${credentialMetadata.sf.username.@{sequence}}" password="${credentialMetadata.sf.password.@{sequence}}" maxPoll="${sf.maxPoll}" serverurl="${sf.serverurl}" deployRoot="src" rollbackOnError="true"  runAllTests="false"/>
+          </then>
+        </if>
+        <!--
+        <sf:deploy username="${sf.username}" password="${sf.password}" maxPoll="${sf.maxPoll}" deployRoot="src" rollbackOnError="true"  testlevel="RunLocalTests"/>
+        -->
+      </sequential>
+    </for>
+	</target>
 </project>
