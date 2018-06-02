@@ -162,7 +162,7 @@
             <echo>@{sequence}</echo>
             <echo>${credentialMetadata.sf.password.@{sequence}}</echo>
             
-            <sf:deploy username="${credentialMetadata.sf.username.@{sequence}}" password="${credentialMetadata.sf.password.@{sequence}}" maxPoll="${sf.maxPoll}" serverurl="${sf.serverurl}" deployRoot="src" rollbackOnError="true"  runAllTests="false"/>
+            <sf:deploy username="${credentialMetadata.sf.username.@{sequence}}" password="${credentialMetadata.sf.password.@{sequence}}" maxPoll="${sf.maxPoll}" serverurl="${sf.serverurl}" deployRoot="retrieveUnpackaged" rollbackOnError="true"  runAllTests="false"/>
           </then>
         </if>
         <!--
