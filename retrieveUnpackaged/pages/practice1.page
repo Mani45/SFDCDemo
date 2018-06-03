@@ -1,7 +1,0 @@
-<apex:page controller="Deleteme7_controller" >
-<apex:pageBlock >
-    <apex:pageblocktable value="{!final}" var="a">
-            
-            </apex:pageblockTable>
-     </apex:pageBlock>
-</apex:page>

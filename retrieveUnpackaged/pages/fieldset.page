@@ -1,9 +1,0 @@
-<apex:page standardController="Contact">
-  <apex:form >
-      <apex:pageblock >
-             <apex:repeat value="{!$ObjectType.Contact.fieldsets.Test_Contact_Field_set}" var="fieldVal">
-                    <apex:Outputtext value="{!Contact[fieldVal]}"/>
-             </apex:repeat>
-        </apex:pageblock>
-    </apex:form>
-</apex:page>

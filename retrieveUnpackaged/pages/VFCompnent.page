@@ -1,3 +1,0 @@
-<apex:page >
-     <apex:image url="{!$Resource.TagCloud}" width="400" height="200"/>
-</apex:page>

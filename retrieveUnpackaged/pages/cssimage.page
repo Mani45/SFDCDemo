@@ -1,3 +1,0 @@
-<apex:page showHeader="false">
-    <apex:stylesheet value="{!URLFOR($Resource.Stylesheets, 'style.css')}"/>
-</apex:page>

@@ -1,7 +1,0 @@
-<apex:page controller="callvfpage">
-     <apex:form >
-          <apex:pageBlock >
-               <apex:commandButton value="Call visualforce Page" action="{!Call_VF_Page}"/> 
-          </apex:pageBlock>
-     </apex:form>
-</apex:page>
