@@ -96,9 +96,9 @@
         <members>*</members>
         <name>StandardValueSet</name>
     </types>
-    <types>
+   <!-- <types>
         <members>*</members>
         <name>Workflow</name>
-    </types>
+    </types> -->
     <version>41.0</version>
 </Package>
