@@ -1,0 +1,19 @@
+<apex:page controller="ContactNotify" tabStyle="Contact">
+ <apex:form >
+   <apex:pageBlock >
+   
+    <apex:pageblocksection title="Contact email update confirmation">
+       <apex:inputfield value="{!con.lastname}"/>
+       <apex:outputfield value="{!con.lastname}"/>
+       <apex:inputfield value="{!con.email}"/>
+
+    </apex:pageblocksection>
+    
+    <apex:pageblockbuttons location="bottom">       <apex:commandButton value="Update" action="{!UpdateContact}"/> </apex:pageblockbuttons>
+
+ 
+   </apex:pageBlock>
+ 
+ </apex:form>
+
+</apex:page>

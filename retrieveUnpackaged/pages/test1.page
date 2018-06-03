@@ -1,0 +1,7 @@
+<apex:page showheader="false">
+<apex:form >
+    <apex:pageblock >
+    
+    </apex:pageblock>
+</apex:form>
+</apex:page>

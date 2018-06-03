@@ -1,0 +1,16 @@
+<apex:page standardController="account" showheader="raji" >
+  
+ {!account.name}
+ 
+ <apex:pageblock >
+ 
+    <apex:pageblocksection >
+    
+    <apex:outputtext value="{!account.name}"/> <br/>
+    <apex:outputtext value="{!account.Phone}"/> <p/>
+    <apex:outputtext value="{!account.billingcity}"/> <p/>
+ 
+    </apex:pageblocksection>
+ </apex:pageblock>
+  <!-- End Default Content REMOVE THIS -->
+</apex:page>

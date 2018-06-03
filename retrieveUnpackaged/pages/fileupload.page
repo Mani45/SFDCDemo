@@ -1,0 +1,12 @@
+<apex:page controller="apfile" >
+  <apex:form >
+    <apex:pageblock title="File Upload">
+      <apex:inputfile value="{!cfile}"></apex:inputfile>
+      <apex:commandButton value="Upload" action="{!doupload}"/>
+       
+       <apex:outputlabel value="{!status}"/>    
+   
+    </apex:pageblock>
+  
+  </apex:form>
+</apex:page>

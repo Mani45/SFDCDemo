@@ -1,0 +1,12 @@
+<apex:page standardController="Case">
+    <apex:includeScript value="/support/console/26.0/integration.js"/>    
+    <script type="text/javascript">
+
+        var eventHandler = function (result) {
+            alert('There is a push notification of object: ' + result.Id);
+         };
+          alert('I am called');   
+         //Add a push notification listener for Case and Account
+         sforce.console.addPushNotificationListener(['Case'], eventHandler);
+    </script>
+</apex:page>

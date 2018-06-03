@@ -1,0 +1,20 @@
+<!-- Varifying values throuhg Javascript--> 
+
+<apex:page showheader="false" controller="pr1">
+<script>
+function f2(){
+alert('Good Morning');
+}
+</script>
+  <apex:form >
+         Enter username &nbsp;&nbsp;&nbsp;
+         <apex:inputText value="{!uname}"/>  <br/>
+         Enter password   &nbsp;&nbsp;&nbsp;
+
+     
+        <apex:inputtext value="{!pwd}"/> <br/>
+        {!op} <br/>
+        <apex:commandButton value="Submit" onclick="f2()" action="{!m1}"/> 
+             
+  </apex:form>    
+</apex:page>

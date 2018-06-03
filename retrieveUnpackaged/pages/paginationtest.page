@@ -1,0 +1,30 @@
+<apex:page controller="paginationtest">
+ <apex:form >
+   <apex:pageBlock >
+    <apex:pageBlockButtons >
+        <apex:commandButton value="Previous" action="{!Previous}" reRender="table" status="status"/>
+          <apex:commandButton value="Next" action="{!Next}" reRender="table" status="status"/>
+        
+               <apex:actionStatus id="status" >
+                      <!-- <apex:facet name="start"> 
+                       <apex:image value="/img/loading32.gif" style="height: 15px;"></apex:image>   
+                       </apex:facet> -->
+                       <apex:facet name="start">
+                       <div class="waitingSearchDiv" id="el_loading" style="background-color: #fbfbfb; height:100%;opacity:0.65;width:100%;">
+                          <div class="waitingHolder" style="top: 100px; width: 91px;">
+                          <img class="waitingImage" src="/img/loading.gif" title="Please Wait..." />
+                         <span class="waitingDescription">Loading...</span>
+                      </div>
+                    </div>
+                  </apex:facet>
+                    </apex:actionstatus>
+   
+    </apex:pageBlockButtons>
+     <apex:pageblockTable value="{!lstAcct}" var="item" id="table">
+        <apex:column value="{!item.name}"/>
+        <apex:column value="{!item.Accountnumber}"/>
+        <apex:column value="{!item.Phone}"/>
+    </apex:pageblockTable>
+  </apex:pageBlock>
+ </apex:form>
+</apex:page>

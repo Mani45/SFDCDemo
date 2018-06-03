@@ -1,0 +1,4 @@
+<apex:page >
+    <apex:outputLabel > Session Id</apex:outputLabel><br/>
+    <apex:outputtext value="{!GETSESSIONID()}"></apex:outputtext>
+</apex:page>

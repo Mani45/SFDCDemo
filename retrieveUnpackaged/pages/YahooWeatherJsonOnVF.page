@@ -1,0 +1,19 @@
+<apex:page controller="YahooWeatherJsonOnVF">
+ <apex:form >
+   <apex:pageBlock title="Yahoo Weather">
+      <apex:pageblocktable value="{!jObj.query}" var="j">
+        <apex:column headerValue="Count" value="{!j.count}"/>
+        <apex:column headerValue="Created" value="{!j.created}"/>
+        <apex:column headerValue="Language" value="{!j.lang}"/>
+        <apex:column headerValue="Link" value="{!j.results.channel.link}"/>
+
+      
+      </apex:pageblocktable>
+   
+   </apex:pageBlock>
+ 
+ </apex:form>
+   
+ 
+ 
+</apex:page>

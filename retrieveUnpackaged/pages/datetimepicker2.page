@@ -1,0 +1,19 @@
+<apex:page standardController="Campaign">
+ <apex:includeScript value="{!URLFOR($Resource.DateTimePicker,'/jquery.js')}"/>
+ <apex:includeScript value="{!URLFOR($Resource.DateTimePicker,'/jquery.datetimepicker.js')}"/>
+ <apex:stylesheet value="{!URLFOR($Resource.DateTimePicker,'/jquery.datetimepicker.css')}" />
+ 
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>  
+<apex:includeScript value="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.2/jquery-ui.min.js" />
+<apex:stylesheet value="//ajax.googleapis.com/ajax/libs/jqueryui/1.8/themes/base/jquery.ui.theme.css"/>
+<apex:stylesheet value="//ajax.googleapis.com/ajax/libs/jqueryui/1.8/themes/base/jquery.ui.base.css"/>
+ <script>
+ $('#datetimepicker').datetimepicker();
+ 
+ 
+ </script>
+ <apex:form >
+ 
+ <apex:inputText id="datetimepicker" size="20" value="{!Campaign.StartDate}" />
+ </apex:form>
+</apex:page>

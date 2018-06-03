@@ -1,0 +1,20 @@
+<!--Display the specified fields of objects through Apex using Constructor-->
+
+<apex:page showHeader="false" controller="apr3">
+  <apex:pageBlock >
+      <apex:pageblockSection title="Lead Records">
+          <apex:pageblocktable value="{!recs}" var="item">
+            <apex:column value="{!item.name}"/>
+            <apex:column value="{!item.email}"/>
+          </apex:pageblocktable>
+     </apex:pageblocksection>  
+   
+     <apex:pageblocksection title="Account Records">
+           <apex:pageblocktable value="{!recs1}" var="item">
+              <apex:column value="{!item.name}"/>
+              <apex:column value="{!item.phone}"/> 
+           </apex:pageblocktable>
+      </apex:pageblockSection>
+  
+  </apex:pageBlock>
+</apex:page>

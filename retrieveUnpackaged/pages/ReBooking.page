@@ -1,0 +1,27 @@
+<apex:page controller="ReBookingController" docType="html-5.0">
+ <apex:form >
+   <apex:pageblock title="Bus Rebooking">
+      
+      <apex:pageBlockSection title="Search Criteria" collapsible="false" columns="5">
+            
+             <apex:pageBlockSectionItem >
+                 Source <apex:input value="{!source}" type="text" /> 
+             </apex:pageBlockSectionItem>
+             
+             <apex:pageBlockSectionItem >
+                 Destination <apex:input value="{!destination}" type="text" /> 
+             </apex:pageBlockSectionItem>            
+             
+             <apex:pageBlockSectionItem >
+                 Date of Journey <apex:input value="{!DOJ}" type="date" /> 
+             </apex:pageBlockSectionItem>
+               
+             <apex:pageBlockSectionItem >
+                  <apex:commandButton value="Search" action="{!searchResults}"/>
+             </apex:pageBlockSectionItem>
+             
+         </apex:pageBlockSection>    
+   
+   </apex:pageblock>
+ </apex:form>
+</apex:page>

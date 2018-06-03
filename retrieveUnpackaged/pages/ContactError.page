@@ -1,0 +1,16 @@
+<apex:page standardController="Contact" extensions="ContactError" >
+ <apex:form >
+     <apex:pageBlock >
+    <!-- <apex:pageMessages ></apex:pageMessages> -->
+    
+
+     <apex:pageblocksection >
+         <apex:inputfield value="{!con.lastname}" />
+         <apex:inputfield value="{!con.firstname}" id="fname"/>
+         <apex:commandButton action="{!save}" value="save"/>
+          <apex:message for="fname"/>
+     </apex:pageblocksection>
+     </apex:pageBlock>
+ 
+ </apex:form>
+</apex:page>

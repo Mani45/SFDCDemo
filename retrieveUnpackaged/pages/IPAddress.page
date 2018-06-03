@@ -1,0 +1,5 @@
+<apex:page controller="IPAddress" >
+Your Login IP Address : {!myIPAddress}
+{!p1}
+{!p2}
+</apex:page>

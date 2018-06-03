@@ -1,0 +1,4 @@
+<apex:component controller="VisualForceComponentController">
+  <apex:attribute description="input field value" name="InputField" assignTo="{!AssignedToField}" type="String" required="true"/>
+  <apex:outputText value="{!InputstringReceived}" style="color:red;"/>
+</apex:component>

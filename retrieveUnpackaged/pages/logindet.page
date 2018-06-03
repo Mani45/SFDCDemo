@@ -1,0 +1,19 @@
+<!-- Entering Record Values into the custom object through apex-->
+
+<apex:page showheader="false" standardController="login__c" tabStyle="account">
+ <apex:form >
+     <apex:pageblock >
+         <apex:pageblocksection title="Login">
+             <apex:inputtext value="{!login__c.name}"/><br/>
+             <apex:inputtext value="{!login__c.Password__c}"/><br/>
+             <apex:commandButton value="Save" action="{!save}"/>
+            
+         
+         </apex:pageblocksection>
+     
+     </apex:pageblock>
+ 
+ 
+ </apex:form>
+ 
+</apex:page>

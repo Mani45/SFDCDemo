@@ -1,0 +1,12 @@
+<apex:page controller="actionstatusDemoController">
+ <apex:form >
+   <apex:pageblock id="pgblck">
+     <apex:actionStatus id="actstatus" >
+        <apex:facet name="start" >
+          <img src="/img/loading32.gif" />                    
+        </apex:facet>
+     </apex:actionStatus>
+     <apex:commandButton value="Submit" status="actstatus" action="{!demomethod}" reRender="pgblck"/>
+   </apex:pageblock>
+ </apex:form>
+</apex:page>

@@ -1,0 +1,26 @@
+<!--Display the specified fields of objects through Apex (command button)-->
+
+<apex:page showheader="false" controller="apr2">
+ <apex:form >
+    <apex:pageblock >
+       <apex:pageblocksection title="Lead Records">
+          <apex:pageblocktable value="{!recs}" var="item">
+           <apex:column value="{!item.name}"/>
+           <apex:column value="{!item.email}"/>
+            </apex:pageblocktable>   <br/>
+            <apex:commandButton value="Get Lrecs" action="{!m1}"/>            
+       </apex:pageblocksection>  
+       
+       <apex:pageblockSection title="Account Records">
+           <apex:pageblocktable value="{!recs2}" var="item">
+           <apex:column value="{!item.name}"/>
+           <apex:column value="{!item.phone}"/>
+            </apex:pageblocktable> <br/>
+               
+           <apex:commandButton value="Get Arecs" action="{!m2}"/>
+                                
+       </apex:pageblockSection> 
+     
+     </apex:pageblock> 
+  </apex:form>
+</apex:page>

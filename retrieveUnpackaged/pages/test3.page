@@ -1,0 +1,4 @@
+<apex:page showheader="flase" standardController="account" >
+ <apex:detail />
+ 
+ </apex:page>

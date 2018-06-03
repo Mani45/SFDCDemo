@@ -1,0 +1,46 @@
+<apex:page showHeader="false" controller="Accountscls">
+  <apex:form >
+  <!--B1clsNaviPage1-->
+    <apex:pageBlock >
+        <apex:pageBlockSection title="Account Records " >
+            <apex:pageBlockTable value="{!records}" var="item" width="600" >
+             
+            
+               <apex:column value="{!item.Name}" />                 
+
+
+                <apex:column headervalue="View">
+                    <apex:commandlink value="View" action="{!showAccounts}" style="color:red" >
+                        <apex:param name="itemId" value="{!item.Id}"                 
+                                                            assignTo="{!rId}"/>
+                    </apex:commandLink>
+                     
+                </apex:column>
+                 
+                
+                 
+                <apex:column headervalue="Delete" >
+                <apex:commandLink value="Delete" action="{!doDelete}"
+                                                            style="color : blue;">
+                        <apex:param name="itemId" value="{!item.Id}"
+                                                            assignTo="{!rId}"/>
+                    </apex:commandLink>
+                </apex:column>
+                 
+                     
+                <apex:column headervalue="Edit">
+                    <apex:commandLink value="Edit/Update" action="{!doUpdate}"
+                                                            style="color : blue;" >
+                        <apex:param name="itemId" value="{!item.Id}"
+                                                            assignTo="{!rId}"/>
+                    </apex:commandLink>
+                </apex:column>
+                 
+                 
+
+                 
+            </apex:pageBlockTable>
+        </apex:pageBlockSection>
+    </apex:pageBlock>
+  </apex:form>
+</apex:page>

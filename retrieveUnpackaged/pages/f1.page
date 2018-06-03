@@ -1,0 +1,10 @@
+<apex:page controller="apex1" >
+<apex:form >
+
+    <apex:outputtext value="Enter Name "></apex:outputtext>
+    <apex:inputtext value="{!name}" /> <br/><br/>
+    Entered Value   {!name}
+    
+    
+</apex:form>
+</apex:page>

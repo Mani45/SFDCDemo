@@ -1,0 +1,32 @@
+<!-- Show the difference between Pageblocktable,Data Table and Datalist -->
+
+<apex:page showheader="false" standardController="Course__c" recordSetVar="resc">HI
+<apex:form >
+  <apex:pageBlock >
+     
+     <apex:pageblockSection title="Pageblock Table Records">
+       
+       <apex:pageblockTable value="{!resc}" var="item">
+          <apex:column value="{!item.name}" />
+          <apex:column value="{!item.Fee__c}"/>
+         
+       </apex:pageblockTable>
+    </apex:pageblockSection>
+    
+   <apex:pageblocksection title="Data table Records">
+       <apex:dataTable value="{!resc}" var="item">
+         <apex:column value="{!item.name}"/>
+         <apex:column value="{!item.Fee__c}"/>
+       </apex:dataTable>    
+   </apex:pageblocksection>
+   
+   <apex:pageblocksection title="Data List Records">
+     <apex:datalist value="{!resc}" var="item">
+       {!item.name}
+       {!item.Fee__c}
+     </apex:datalist>
+   </apex:pageblocksection>
+ 
+  </apex:pageBlock>
+ </apex:form> 
+</apex:page>

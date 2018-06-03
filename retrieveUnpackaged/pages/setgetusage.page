@@ -1,0 +1,11 @@
+<apex:page controller="setgetusage" >
+<apex:form >
+Enter Your Name:<br/>
+<apex:inputtext value="{!name}"/>
+<apex:commandButton value="submit"/>
+<br/>
+{!name}
+
+</apex:form>
+  
+</apex:page>

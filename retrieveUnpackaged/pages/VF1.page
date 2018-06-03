@@ -1,0 +1,17 @@
+<apex:page >
+
+  <apex:form >
+  
+          <apex:commandButton value="Click Here"/>
+  
+  </apex:form>
+
+  
+
+    Good Morning Salesforce
+    
+
+    
+
+
+</apex:page>

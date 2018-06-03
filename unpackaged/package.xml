@@ -4,7 +4,7 @@
         <members>*</members>
         <name>ApexClass</name>
     </types>
-   <!-- <types>
+    <types>
         <members>*</members>
         <name>ApexComponent</name>
     </types>
@@ -35,12 +35,12 @@
     <types>
         <members>*</members>
         <name>CustomMetadata</name>
-    </types> -->
+    </types> 
     <types>
         <members>*</members>
         <name>CustomObject</name>
     </types>
-  <!--  <types>
+    <types>
         <members>*</members>
         <name>CustomTab</name>
     </types>
@@ -99,6 +99,6 @@
     <types>
         <members>*</members>
         <name>BusinessProcess</name>
-    </types> -->
+    </types> 
     <version>41.0</version>
 </Package>

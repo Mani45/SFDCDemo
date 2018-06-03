@@ -1,0 +1,45 @@
+<apex:page id="page" controller="StreamingAPIController">
+<apex:form id="form">
+<apex:includeScript value="{!$Resource.cometd2}"/>
+<apex:includeScript value="{!$Resource.jquery45}"/>
+<apex:includeScript value="{!$Resource.json245}"/>
+<apex:includeScript value="{!$Resource.jquery_cometd45}"/>
+<apex:actionFunction name="GetRefreshedAccounts" reRender="pageBlock,pageBlockTable"/>
+ 
+<script type="text/javascript">
+    (function($){
+        $(document).ready(function() {
+            // Connect to the CometD endpoint
+            $.cometd.init({
+                    url: window.location.protocol+'//'+window.location.hostname+'/cometd/26.0/',
+                    requestHeaders: { Authorization: 'OAuth {!$Api.Session_ID}'},
+                    appendMessageTypeToURL : false
+                });
+            // Subscribe to a topic. JSON-encoded update will be returned
+            // in the callback
+            $.cometd.subscribe('/topic/ContactUpdates2', function(message) {
+            console.log('message here-->'+message);
+            GetRefreshedAccounts();
+             
+            });
+        });
+    })(jQuery)
+</script>
+ 
+<apex:pageBlock id="pageBlock">
+<apex:variable var="count" value="{!0}" />
+<apex:pageBlockTable id="pageBlockTable" value="{!getRefreshedAccount}" var="account">
+ 
+<apex:column headerValue="S.No.">
+<apex:variable var="count" value="{!count+1}" />
+{!count}
+</apex:column>
+<apex:column value="{!account.Name}" headerValue="Name"/>
+<apex:column value="{!account.Amount__c}" headerValue="Amount"/>
+<apex:column value="{!account.createddate}" headerValue="Created Date"/>
+ 
+</apex:pageBlockTable>
+</apex:pageBlock>
+ 
+</apex:form>
+</apex:page>

@@ -1,0 +1,61 @@
+<apex:page standardcontroller="Appsubscriber__c" extensions="AppRegistrationController">
+    <apex:pageMessages ></apex:pageMessages>
+   <apex:form id="Register">
+               <apex:pageBlock rendered="{!Formswitcher}">
+            <apex:pageBlockTable value="{!SubscribeDetails}" var="s">
+                <apex:column value="{!s.Name}"/>
+                <apex:column value="{!s.Email__c}"/>
+                <apex:column headerValue="Code">
+                <apex:inputField value="{!s.Code__c}" required="true"/>
+                </apex:column>
+                <apex:column value="{!s.Status__c}"/>
+                <apex:column width="10%">
+                    <apex:commandLink action="{!SubscribeUpdate}" style="padding:1px 2px; font-weight:bold;">Set Code</apex:commandLink>
+                </apex:column>
+            </apex:pageBlockTable>
+        </apex:pageBlock>
+        <apex:pageBlock rendered="{!!Formswitcher}">
+                  <div>
+                    <apex:outputLabel >Name</apex:outputLabel>
+                    <apex:inputField id="Name" value="{!SubscribeObject.PersonName__c}"/>
+                  </div>
+                  <div>
+                    <apex:outputLabel >Company Name</apex:outputLabel><br/>
+                    <apex:inputField id="CompanyName" value="{!SubscribeObject.Name}" required="true"/>
+                  </div>
+                  <div>    
+                    <apex:outputLabel >Email</apex:outputLabel>
+                    <apex:inputField id="Email" value="{!SubscribeObject.Email__c}"/>
+                  </div>
+                   <div>    
+                    <apex:outputLabel >Phone</apex:outputLabel><br/>
+                    <apex:inputField id="Phone" value="{!SubscribeObject.Phone__c}"/>
+                  </div>
+                  <div>    
+                    <apex:outputLabel >Street</apex:outputLabel><br/>
+                    <apex:inputTextarea id="Street" value="{!SubscribeObject.Phone__c}"/>
+                  </div>
+                  <div>    
+                    <apex:outputLabel >City</apex:outputLabel><br/>
+                    <apex:inputField id="City" value="{!SubscribeObject.City__c}"/>
+                  </div>
+                  <div>    
+                    <apex:outputLabel >State</apex:outputLabel><br/>
+                    <apex:inputField id="State" value="{!SubscribeObject.State__c}"/>
+                  </div>      
+                  <div>    
+                    <apex:outputLabel >Country</apex:outputLabel><br/>
+                    <apex:inputField id="Country" value="{!SubscribeObject.Country__c}"/>
+                  </div> 
+                  <div>    
+                    <apex:outputLabel >Zip Code</apex:outputLabel><br/>
+                    <apex:inputField id="Zip" value="{!SubscribeObject.Zip_Code__c}"/>
+                  </div>
+                  <apex:pageBlockButtons >
+                       <apex:commandButton id="Save" action="{!Save}" value="Request Access Code"/>
+                       <apex:commandButton id="Cancel" action="{!Cancel}" value="Cancel"/>
+                  </apex:pageBlockButtons>
+
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

@@ -1,0 +1,84 @@
+<apex:page showheader="false" sidebar="false" standardStylesheets="false" id="ContactAutocompletePage">
+
+    <apex:includeScript value="https://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js" />
+    <apex:includeScript value="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.16/jquery-ui.min.js" />
+    <apex:includeScript value="/soap/ajax/18.0/connection.js" />
+    <apex:includeScript value="/soap/ajax/18.0/apex.js" />
+
+    <script type="text/javascript">
+        var __sfdcSessionId = '{!GETSESSIONID()}';
+    </script>
+
+    <apex:stylesheet value="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.6/themes/ui-lightness/jquery-ui.css" />
+
+    <style>
+        body
+        {
+            font-family: arial, helvetica,sans-serif; 
+        }
+    </style>
+
+    <script>
+        // this is needed because Salesforce uses another JS library
+        var j$ = jQuery.noConflict();
+
+        j$(document).ready(function(){
+            init();
+        });
+
+        function init()
+        {
+            sforce.connection.sessionId = __sfdcSessionId;
+
+            j$("#FindContact").autocomplete(
+            {
+                source: function(request, response){response(findContacts(request.term));},
+                minLength: 1
+            });
+        }
+
+        function findContacts(searchterm)
+        {
+
+            var result = sforce.apex.execute("ContactServices", "FindContact", {ContactSearchTerm:searchterm});
+
+            var mappedresult = j$.map(result,
+                function(item, index) {
+                    return {
+                        label:item.FirstName + " " + item.LastName, value:item.Id
+                    }
+                }
+            );
+
+            return mappedresult;
+        }
+
+    </script>    
+
+    <apex:form id="ContactForm">
+        <h1>jQuery Autocomplete With the Force.com Ajax API</h1>
+        <p>
+            Contact Autocomplete: <input type="text" id="FindContact"></input><br/>
+            <span>Try "Barr", "Song", or "Jack"</span>
+        </p>
+        <p><br/></p>
+        <p>
+            <span>Documents</span>
+            <ul>
+                <li><a href="http://jquery.com/">jQuery</a></li>
+                <li><a href="http://jqueryui.com/demos/autocomplete/">jQuery UI Autocomplete</a></li>
+                <li><a href="http://www.salesforce.com/us/developer/docs/ajax/index.htm">Force.com Ajax API</a></li>
+                <li><a href="http://www.salesforce.com/us/developer/docs/api/index_Left.htm#CSHID=sforce_api_calls_sosl.htm|StartTopic=Content%2Fsforce_api_calls_sosl.htm|SkinName=webhelp">SOSL</a></li>
+            </ul>
+        </p>
+        <p><br/></p>
+        <p>
+            <span>Source</span>
+            <ul>
+             <!--   <li><a href="{!$Resource.jQueryAutocompleteWithSFAjaxAPI}">Page</a></li> 
+                <li><a href="{!$Resource.ContactServices}">Controller</a></li> -->
+            </ul>
+        </p>
+    </apex:form>
+
+</apex:page>

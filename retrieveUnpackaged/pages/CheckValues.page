@@ -1,0 +1,26 @@
+<apex:page controller="AutoComplete_Test_Con" tabStyle="Account">   
+    <apex:form >  
+    <apex:pageMessages ></apex:pageMessages>     
+        <apex:pageBlock >            
+            <apex:pageBlockSection title="Auto Suggestion for Disease" collapsible="false">              
+               <apex:pageBlockSectionItem >
+                    <apex:outputLabel >Disease</apex:outputLabel>
+                    <c:Autocomplete labelField="Disease__c" valueField="id" SObject="Account" targetField="{!targetField}" id="combobox"/>
+                </apex:pageBlockSectionItem>
+            </apex:pageBlockSection>    
+           
+           <!-- <apex:pageBlockSection id="val">
+                 <apex:pageBlockSectionItem >
+                     <apex:outputLabel >Disease</apex:outputLabel>
+                     <apex:outputText value="{!targetField}"/>  
+                </apex:pageBlockSectionItem>  
+                 
+            </apex:pageBlockSection> -->
+            <apex:pageBlockButtons >
+               <!--  <apex:commandButton value="Save" reRender="val,val1"/> -->
+                   <apex:commandButton value="Save" action="{!save}"/>
+            </apex:pageBlockButtons>
+
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

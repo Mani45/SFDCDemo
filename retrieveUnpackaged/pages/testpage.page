@@ -1,0 +1,17 @@
+<apex:page standardController="Account" extensions="testclass" tabStyle="campaign">
+
+<apex:form >
+      
+        <apex:pageBlock >
+           <apex:pageBlockSection title="test">
+           
+           </apex:pageBlockSection>
+        
+        </apex:pageBlock>
+      
+      
+      </apex:form>
+
+
+ 
+</apex:page>

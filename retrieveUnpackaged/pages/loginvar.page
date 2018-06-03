@@ -1,0 +1,19 @@
+<!-- Varifying record values on custom object throuhg apex -->
+
+
+<apex:page showheader="false" controller="aloginvar"  >
+
+<apex:form >
+  <apex:pageblock >
+     <apex:pageblocksection title="Login Deatails varify">
+         Enter Username<apex:inputtext value="{!uid}"/>
+         Enter Password<apex:inputtext value="{!pwd}"/>
+                
+         <apex:commandButton value="Varify" action="{!m1}"/>
+         <apex:outputtext value="{!stat}" ></apex:outputtext>
+     
+     </apex:pageblocksection> 
+ 
+  </apex:pageblock>
+</apex:form>  
+</apex:page>

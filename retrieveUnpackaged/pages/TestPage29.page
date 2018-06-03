@@ -1,0 +1,15 @@
+<apex:page >
+  <apex:form >
+    <apex:pageBlock title="Test BLock">
+      <apex:pageblocksection >
+      
+       <apex:inputtext />
+       
+              <apex:inputtext /> 
+      
+      </apex:pageblocksection>
+    
+    </apex:pageBlock>
+  
+  </apex:form>
+</apex:page>

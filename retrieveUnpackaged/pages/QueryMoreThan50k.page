@@ -1,0 +1,13 @@
+<apex:page controller="QueryMoreThan50k">
+
+    <div id="totalAccounts"></div> 
+                <script>
+                Visualforce.remoting.Manager.invokeAction(
+                    '{!$RemoteAction.QueryMoreThan50k.getTask}',
+                        function(result){
+                            alert('Total Records: '+result.length);
+                        }
+
+                    );
+                </script>
+</apex:page>

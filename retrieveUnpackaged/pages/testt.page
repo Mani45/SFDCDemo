@@ -1,0 +1,27 @@
+<apex:page controller="aptestt" showheader="false"> 
+  Location Table
+  <apex:messages style="color:red"></apex:messages>
+  
+    <apex:form >
+        <apex:pageblock >
+              
+              <apex:pageblocktable value="{!locationList}" var="locItem">
+              <apex:column headerValue="Country">
+              <apex:inputfield value="{!locItem.Country__c}"/>
+              </apex:column>
+              
+              <apex:column headervalue="State">
+              <apex:inputfield value="{!locItem.state__c}"/>
+              </apex:column>
+                
+              <apex:column headervalue="City">
+              <apex:inputfield value="{!locItem.city__c}"/>
+              </apex:column>
+              
+         
+              
+            </apex:pageblocktable>
+        </apex:pageblock>
+    </apex:form>
+  
+</apex:page>
