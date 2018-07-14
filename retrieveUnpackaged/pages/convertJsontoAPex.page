@@ -1,8 +1,0 @@
-<apex:page controller="convertJsontoAPex">
- <apex:form >
-   <apex:pageBlock >
-   
-     <apex:pageblockTable value="{!m}" var="m2"> </apex:pageblockTable>
-   </apex:pageBlock>
- </apex:form>
-</apex:page>

@@ -1,3 +1,0 @@
-<apex:page standardController="tesy__c" extensions="DispatcherContactNewController"  action="{!redirect}"
-    >
-</apex:page>

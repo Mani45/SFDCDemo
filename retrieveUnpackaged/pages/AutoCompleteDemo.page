@@ -1,5 +1,0 @@
-<apex:page >
-    <apex:form >
-        <c:autocomplete_component ComponentLabel="Enter Account Name : "/>
-    </apex:form>
-</apex:page>

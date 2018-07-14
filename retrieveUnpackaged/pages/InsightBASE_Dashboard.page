@@ -1,6 +1,0 @@
-<apex:page standardcontroller="Lead" showheader="false" sidebar="false" extensions="AppAcessController">
-  <div>
-   <apex:iframe src="https://insight-base.com/contact/em/{!leademail}/token/{!SecurityCode}" height="500px" width="100%" scrolling="true" id="theIframe">
-  </apex:iframe>
-  </div>
-</apex:page>

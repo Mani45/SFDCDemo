@@ -1,7 +1,0 @@
-<apex:page standardController="Contact" extensions="vijulContactController">
-	<!--  <apex:detail relatedList="false" />    -->   
-	
-	<iframe frameborder='0' allowtransparency='true' src='http://localhost:8080/?agent=salesforce&sf_type=contact&contact_email={!URLENCODE(contact.email)}&contact_first_name={!URLENCODE(contact.firstname)}&contact_last_name={!URLENCODE(contact.lastname)}' style='background: #F3F3EC; width: 100%; height: 250px; overflow: auto;' id='main_view'>
-	</iframe>
-	
-</apex:page>

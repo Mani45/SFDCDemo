@@ -1,7 +1,0 @@
-<apex:page controller="DynamicComponentTest" id="page" docType="html-5.0">
-    <apex:sectionHeader title="Cares" subTitle="Diagnosis Survey" />
-    <apex:form id="form">
-        <apex:pageMessages id="msg"/>
-        <apex:dynamicComponent componentValue="{!DynamicPageBlock}"/>
-    </apex:form>
-</apex:page>

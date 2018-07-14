@@ -1,8 +1,0 @@
-<apex:page controller="custlabelcontroller">
-   <apex:form >
-     <apex:pageblock >
-       Value stored in custom label is: {!$Label.Testing}
-     </apex:pageblock>
-   </apex:form>
-
-</apex:page>
