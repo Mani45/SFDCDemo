@@ -28,11 +28,12 @@
         <members>*</members>
         <name>AssignmentRules</name>
     </types>
+	-->
     <types>
         <members>*</members>
         <name>CustomLabels</name>
     </types>
-    <types>
+  <!--  <types>
         <members>*</members>
         <name>CustomMetadata</name>
     </types> -->
